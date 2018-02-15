@@ -1,0 +1,45 @@
+/* Contains all Page specific css  */
+
+#login-container {
+	/* http://www.smashingmagazine.com/2013/08/09/absolute-horizontal-vertical-centering-css/ */
+	margin: auto;
+	position: absolute;
+  	top: 0; left: 0; bottom: 0; right: 0;
+	/*width: 500px;*/
+	height: 300px;
+	border: 1px solid black;
+	min-width: 300px;
+	max-width: 500px;
+}
+
+/* Center Align a div inside parent, alternative.
+.parent {
+  position: relative;
+}
+.child {
+  position: absolute;
+  top: 50%;
+  height: 100px;
+  margin-top: -50px; /* account for padding and border if not using box-sizing: border-box; */
+/*
+}
+*/
+
+/*--------------------
+.element {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+*/
+
+#login-container form {
+	margin: 10px;
+	border: 1px solid black !important;
+	min-width: 100px;
+}
+
+#login-container form input {
+	min-width: 20px;
+	max-width: 100px;
+}

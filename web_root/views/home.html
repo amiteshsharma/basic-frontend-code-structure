@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<link rel="stylesheet" type="text/css" href="../resources/css/base/base_styleguide.css"/>
+	<link rel="stylesheet" type="text/css" href="../resources/css/base/global_common_styles.css"/>	
+	<link rel="stylesheet" type="text/css" href="../resources/css/views/home.css"/>
+</head>
+<body>
+	<div id="home-container">
+		<h1 id="user-title"></h1>
+		<h2>AJAX Sample</h2>
+		<button id="launch" type="button">Get JSON</button>
+		<div id="json-container"/>
+	</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="../resources/js/utils/ajax.util.js"></script>
+<script src="../resources/js/utils/document.util.js"></script>
+<script src="../resources/js/utils/namespace.util.js"></script>
+<script src="../resources/js/views/home-page-handler.js"></script>
+<script type="text/javascript">
+
+//Init Module Handler as soon as Document gets ready
+
+$(document).ready(function() {
+
+	var cfg = {};
+
+	if(window.location.hash) {
+		cfg.userName = window.location.hash.replace('#', '');
+	} else {
+		cfg.userName = 'Guest';	
+	}
+
+	var pageHandler = new usermanager.ui.handlers.HomePageHandler();
+	//var pageHandler = new HomePageHandler();
+	pageHandler.init(cfg);
+
+});
+
+/* Internal Impl of document.ready 
+DocumentReady(function() {
+
+	
+});
+*/
+</script>
+</html>

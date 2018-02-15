@@ -1,0 +1,13 @@
+/*Global Style*/
+* {
+    box-sizing: border-box;
+} 
+
+body {
+    font-size: 100%;
+}
+
+p {
+    font-size: 0.75em;
+}
+
